@@ -1,8 +1,9 @@
 @use "/src/assets/global";
 .DashboardStatistique {
   @include global.paddingInline();
-  @apply flex flex-col gap-8 w-full;
+  @apply flex flex-col gap-8 w-full px-0;
   h2 {
+    @apply pl-8 md:pl-0;
     color: #fff;
     font-family: Lato;
     font-size: 20px;
@@ -12,14 +13,14 @@
   }
 
   .LineChart-container {
-    @apply h-[300px] w-full;
+    @apply h-[300px] w-full -translate-x-5 md:translate-x-0;
     .DashboardLineChart {
       @apply w-full h-full;
     }
   }
 
   .btn-control-container {
-    @apply items-center  justify-between;
+    @apply items-center  justify-between mx-8 md:mx-0;
     button {
       @apply border-2 px-4 py-2 rounded-sm;
       color: #fff;
