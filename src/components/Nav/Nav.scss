@@ -1,0 +1,28 @@
+.Nav {
+  @apply sticky top-0 pt-4 md:py-4 flex flex-col items-start md:items-center z-10;
+  img {
+    @apply ml-8 md:ml-0;
+  }
+  h1 {
+    @apply text-center mt-2 ml-8 md:ml-0;
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  ul {
+    @apply w-full my-auto mt-4 md:mt-auto flex flex-row md:flex-col items-center;
+    li {
+      @apply w-full flex py-4 justify-center items-center duration-500 cursor-pointer;
+      &.active {
+        @apply bg-secondary;
+        svg {
+          @apply duration-500 stroke-blue;
+        }
+      }
+    }
+  }
+}

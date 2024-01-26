@@ -1,0 +1,35 @@
+.DashboardTotalInvestissement {
+  @apply rounded-xl border-[1px] border-white p-4 flex flex-col justify-between;
+  box-shadow: 12px 12px 11px 0px rgba(0, 0, 0, 0.3);
+  .icon-container {
+    @apply flex items-start justify-between relative;
+    span {
+      @apply absolute right-0 text-green;
+      font-family: Lato;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      svg {
+        @apply stroke-green;
+      }
+    }
+  }
+
+  h3 {
+    color: #fff;
+    font-family: Lato;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  h4 {
+    color: #fff;
+    font-family: Lato;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}

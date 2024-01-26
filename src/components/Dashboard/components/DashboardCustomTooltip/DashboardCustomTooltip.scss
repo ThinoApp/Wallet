@@ -1,0 +1,19 @@
+.DashboardCustomTooltip {
+  @apply flex flex-col items-start gap-2;
+  p {
+    @apply flex items-center text-white gap-4 bg-primary p-2 rounded-sm  border-2;
+
+    &.depense {
+      @apply border-red;
+    }
+    &.economie {
+      @apply border-green;
+    }
+    &.investissement {
+      @apply border-blue;
+    }
+    &.revenu {
+      @apply border-violet;
+    }
+  }
+}

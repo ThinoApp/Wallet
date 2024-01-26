@@ -1,0 +1,26 @@
+@use "/src/assets/global";
+
+.DashboardTendances {
+  @include global.paddingInline();
+  @apply flex flex-col items-start gap-4 w-full;
+
+  h2 {
+    color: #fff;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &-container {
+    @apply flex flex-col md:grid grid-cols-3 grid-rows-2 gap-x-20 gap-y-12 w-full;
+
+    & > div {
+      @apply py-8 px-4 bg-primary rounded-lg;
+    }
+
+    & > div:nth-child(4) {
+      @apply col-start-1 col-end-4 h-fit;
+    }
+  }
+}

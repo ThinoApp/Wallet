@@ -1,0 +1,12 @@
+.App {
+  @apply w-screen h-screen flex flex-col md:flex-row;
+
+  & > div:nth-child(1) {
+    @apply bg-primary;
+    flex: 0.05;
+  }
+  & > div:nth-child(2) {
+    @apply bg-secondary;
+    flex: 1;
+  }
+}

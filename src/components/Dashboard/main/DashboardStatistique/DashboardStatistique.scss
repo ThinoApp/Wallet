@@ -1,0 +1,36 @@
+@use "/src/assets/global";
+.DashboardStatistique {
+  @include global.paddingInline();
+  @apply flex flex-col gap-8 w-full;
+  h2 {
+    color: #fff;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .LineChart-container {
+    @apply h-[300px] w-full;
+    .DashboardLineChart {
+      @apply w-full h-full;
+    }
+  }
+
+  .btn-control-container {
+    @apply items-center  justify-between;
+    button {
+      @apply border-2 px-4 py-2 rounded-sm;
+      color: #fff;
+      font-family: Lato;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      &:hover {
+        @apply bg-white text-primary;
+      }
+    }
+  }
+}

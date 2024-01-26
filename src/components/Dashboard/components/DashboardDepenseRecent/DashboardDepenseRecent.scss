@@ -1,0 +1,53 @@
+.DashboardDepenseRecent {
+  @apply p-4 flex flex-col gap-4;
+  border-radius: 13px;
+  border: 1px solid rgba(40, 179, 188, 0.89);
+  background: #2a2a2a;
+  box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.25);
+  h2 {
+    @apply flex items-center gap-4;
+    span {
+      color: #fff;
+      font-family: Lato;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+  ul.depense-recent {
+    @apply flex flex-col gap-5 md:gap-4;
+    li {
+      @apply flex flex-row flex-wrap justify-between gap-y-2;
+      list-style-type: none;
+      p {
+        @apply flex items-center gap-2  flex-1;
+        color: #fff;
+        font-family: Lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        &:nth-of-type(1) {
+          @apply order-2 md:order-none;
+        }
+        &:nth-of-type(2) {
+          @apply order-3 flex-row-reverse md:flex-row md:order-none justify-start;
+          flex: 0.5;
+        }
+        &:nth-child(3) {
+          @apply order-1 md:order-none min-w-[100%] md:min-w-fit text-[15px] flex justify-end;
+        }
+      }
+    }
+  }
+  button {
+    @apply bg-primary py-4 outline-none;
+    color: #fff;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

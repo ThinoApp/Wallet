@@ -1,0 +1,16 @@
+@use "/src/assets/global";
+.DashboardPortefeuille {
+  @include global.paddingInline();
+  @apply flex flex-col md:grid md:grid-cols-3 md:grid-rows-2 h-auto md:h-[44vh] gap-4 md:gap-x-8  w-full;
+  grid-template-columns: 1fr 1fr 2.5fr;
+  grid-template-rows: 1fr 1fr;
+  & > * {
+    // @apply border-2;
+  }
+  & > div:nth-child(1) {
+    @apply col-start-1 col-end-3;
+  }
+  & > div:nth-child(2) {
+    @apply col-start-3 row-start-1 row-end-3;
+  }
+}
