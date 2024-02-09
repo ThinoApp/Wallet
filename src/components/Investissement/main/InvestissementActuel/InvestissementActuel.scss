@@ -1,0 +1,156 @@
+@use "/src/assets/global";
+
+.InvestissementActuel {
+  @include global.paddingInline();
+  @apply flex flex-col items-start gap-4 w-full;
+  h2 {
+    color: #fff;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .InvestissementActuel-list {
+    @apply grid grid-cols-1 sm:grid-cols-3 grid-flow-row w-full gap-y-8 sm:gap-y-12 sm:gap-x-12;
+    .investissement-item {
+      @apply flex flex-col gap-4 w-full p-4 sm:p-8;
+      &:hover {
+        border: 1px solid #fff;
+        box-shadow: 10px 10px 0px 0px rgba(255, 255, 255, 0.25);
+      }
+      border: 1px solid rgba($color: #fff, $alpha: 0.5);
+      background: #383838;
+      .investissement-header {
+        @apply flex items-center gap-4 pb-4;
+        background: linear-gradient(#fff, #fff);
+        background-size: 95% 2px;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        h3 {
+          @apply mr-auto;
+          color: #fff;
+          font-family: Lato;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+
+      .investissement-encours {
+        @apply flex flex-row items-center gap-4 p-2 px-4;
+        & > svg:nth-of-type(1) {
+          @apply scale-150;
+        }
+        p {
+          @apply flex flex-col gap-2;
+          &:nth-of-type(1) {
+            @apply mr-auto;
+            span {
+              &:nth-child(1) {
+                color: #fff;
+                font-family: Lato;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+              }
+              &:nth-child(2) {
+                color: #fff;
+                font-family: Lato;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+              }
+            }
+          }
+          &:nth-of-type(2) {
+            span.label {
+              color: #fff;
+              font-family: Lato;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: normal;
+            }
+            span.value {
+              @apply flex gap-2;
+              color: #fff;
+              font-family: Lato;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              svg {
+                @apply stroke-green;
+              }
+            }
+          }
+        }
+      }
+      h4 {
+        color: #fff;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .investissement-historique {
+        @apply flex flex-col gap-2;
+        .detail-item {
+          @apply flex justify-between p-4;
+          border-radius: 3px;
+          background: rgba(217, 217, 217, 0.08);
+          p:nth-of-type(1) {
+            @apply flex flex-col justify-between gap-2;
+            span.date {
+              color: #fff;
+              font-family: Lato;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+            span.value {
+              color: #fff;
+              font-family: Lato;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 800;
+              line-height: normal;
+            }
+          }
+          p:nth-of-type(2) {
+            @apply flex flex-row self-end gap-2;
+            color: #fff;
+            font-family: Lato;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            svg {
+              @apply stroke-green;
+            }
+          }
+        }
+      }
+
+      button {
+        @apply py-4;
+        border: 1px solid rgba(255, 255, 255, 0.44);
+        background: #2a2a2a;
+        color: #fff;
+        font-family: Lato;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}

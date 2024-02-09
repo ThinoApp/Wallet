@@ -1,1 +1,7 @@
-.Depense { }
+.Depense {
+  @apply h-screen  overflow-y-scroll pt-4 flex flex-col items-start gap-12;
+
+  .Depense-crud-container {
+    @apply w-full  flex flex-col sm:flex-row gap-4;
+  }
+}

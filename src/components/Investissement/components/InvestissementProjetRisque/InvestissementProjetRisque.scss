@@ -1,0 +1,19 @@
+.InvestissementProjetRisque {
+  @apply w-full flex flex-col items-start gap-12;
+
+  h3 {
+    @apply text-lg text-white font-normal font-lato;
+  }
+  .projet-container {
+    @apply flex flex-row flex-wrap w-full justify-around;
+    .projet-item {
+      @apply flex flex-col items-center gap-4;
+      h4 {
+        @apply text-[18px] text-white font-medium font-lato;
+      }
+      button {
+        @apply font-lato text-[20px] text-red;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "/src/assets/global";
+
+.InvestissementRisque {
+  @include global.paddingInline();
+  @apply flex flex-col items-start gap-4 w-full min-h-[100vh];
+  h2 {
+    color: #e54747;
+    font-family: Lato;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

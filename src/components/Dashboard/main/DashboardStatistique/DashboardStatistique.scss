@@ -1,7 +1,7 @@
 @use "/src/assets/global";
 .DashboardStatistique {
   @include global.paddingInline();
-  @apply flex flex-col gap-8 w-full px-0;
+  @apply flex flex-col gap-8 w-full px-0 sm:px-16;
   h2 {
     @apply pl-8 md:pl-0;
     color: #fff;

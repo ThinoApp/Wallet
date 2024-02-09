@@ -1,0 +1,16 @@
+@use "/src/assets/global";
+.DepenseHeader {
+  @include global.paddingInline();
+  @apply w-full flex flex-col-reverse md:flex-row items-start md:items-center gap-4 md:gap-0 justify-between;
+
+  h3 {
+    @apply cursor-pointer;
+    color: #fff;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}

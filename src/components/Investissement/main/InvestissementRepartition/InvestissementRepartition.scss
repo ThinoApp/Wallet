@@ -1,0 +1,32 @@
+@use "/src/assets/global";
+.InvestissementRepartition {
+  @include global.paddingInline();
+  @apply flex-1 flex flex-col gap-4;
+
+  h2 {
+    color: #fff;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .Pie-container {
+    @apply py-4 rounded-md bg-primary h-full w-full flex flex-col-reverse gap-4 sm:gap-0 px-2 sm:px-0 sm:flex-row justify-center items-start;
+    .labelContainer {
+      @apply flex flex-row flex-wrap justify-center sm:justify-start gap-y-4 sm:flex-col items-start gap-2 mt-2;
+      .label-item {
+        @apply flex flex-row items-center gap-2 cursor-pointer;
+        p {
+          color: #fff;
+          font-family: Lato;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

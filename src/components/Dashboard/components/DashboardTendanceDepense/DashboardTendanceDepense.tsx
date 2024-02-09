@@ -2,12 +2,13 @@ import CircularIndicator from "@/components/CircularIndicator/CircularIndicator"
 import "./DashboardTendanceDepense.scss";
 import { cpu, trendingDown } from "@/utils/icons";
 import config from "@/utils/config";
+import CustomCard from "@/components/CustomCard/CustomCard";
 interface Props {
   color: string;
 }
 const DashboardTendanceDepense = ({ color }: Props) => {
   return (
-    <div className="DashboardTendanceDepense">
+    <CustomCard colorGloss="#db3333" className="DashboardTendanceDepense">
       <CircularIndicator
         value={30}
         color={color}
@@ -78,7 +79,7 @@ const DashboardTendanceDepense = ({ color }: Props) => {
           </ul>
         </div>
       </div>
-    </div>
+    </CustomCard>
   );
 };
 export default DashboardTendanceDepense;

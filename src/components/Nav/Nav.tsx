@@ -1,6 +1,7 @@
 import config from "@/utils/config";
 import "./Nav.scss";
 import { menus } from "@/containers/NavContainer/Nav.utils";
+import { Link } from "react-router-dom";
 
 interface Props {
   active: number;
@@ -23,13 +24,11 @@ const Nav = ({ active, handleMenuClick }: Props) => {
       </h1>
       <ul>
         {menus.map((item, index) => (
-          <li
-            key={index}
-            className={`${active === index ? "active" : ""}`}
-            onClick={() => handleMenuClick(index)}
-          >
-            {/* <img src={item} alt="icon" /> */}
-            {item}
+          <li key={index} className={`${active === index ? "active" : ""}`}>
+            <Link to={item.link} onClick={() => handleMenuClick(index)}>
+              {/* <img src={item} alt="icon" /> */}
+              {item.icon}
+            </Link>
           </li>
         ))}
       </ul>

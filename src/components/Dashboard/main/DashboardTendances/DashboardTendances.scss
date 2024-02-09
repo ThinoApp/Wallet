@@ -14,7 +14,7 @@
   }
   &-container {
     @apply flex flex-col md:grid grid-cols-3 grid-rows-2 gap-x-20 gap-y-12 w-full;
-
+    grid-template-rows: 2fr 1fr;
     & > div {
       @apply py-8 px-4 bg-primary rounded-lg;
     }

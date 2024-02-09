@@ -1,13 +1,14 @@
 import CircularIndicator from "@/components/CircularIndicator/CircularIndicator";
 import "./DashboardTendanceEconomie.scss";
 import { box, cpu, dollarSign } from "@/utils/icons";
+import CustomCard from "@/components/CustomCard/CustomCard";
 
 interface Props {
   color: string;
 }
 const DashboardTendanceEconomie = ({ color }: Props) => {
   return (
-    <div className="DashboardTendanceEconomie">
+    <CustomCard colorGloss="#8b2aad" className="DashboardTendanceEconomie">
       <CircularIndicator
         value={67}
         color={color}
@@ -70,7 +71,7 @@ const DashboardTendanceEconomie = ({ color }: Props) => {
           </ul>
         </div>
       </div>
-    </div>
+    </CustomCard>
   );
 };
 export default DashboardTendanceEconomie;

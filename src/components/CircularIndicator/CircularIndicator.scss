@@ -5,6 +5,7 @@
   border-radius: 50%;
   color: white;
   background: #222 linear-gradient(to right, transparent 50%, var(--clr) 0);
+
   /* background: #444 linear-gradient(to right, transparent 50%, red 0); */
   filter: drop-shadow(10px 10px 0px rgba(0, 0, 0, 0.23));
 }
@@ -32,9 +33,6 @@
   margin-left: 50%;
   transform-origin: left;
   border-radius: 0 100% 100% 0/50%;
-  // transform: rotate(0.01turn);
-  // transform: rotate(calc((var(--i) - 50) * 0.01turn));
-
   background-color: var(--clr);
   transition: 0.5s ease-in;
 }
@@ -45,9 +43,7 @@
   inset: 20px;
   border-radius: 50%;
   background-color: #383838;
-  // &:hover {
   filter: drop-shadow(4px 4px 8px rgba(#000, 1));
-  // }
 }
 
 .progress.show::before {
@@ -62,6 +58,8 @@
 
 .tracker-container {
   position: absolute;
+  transition: 0.5s ease-in;
+
   top: 0;
   left: 0;
   display: block;
@@ -71,7 +69,7 @@
   background-color: transparent;
   z-index: 1;
   .tracker {
-    transform: translate(32%, 32%);
+    transform: translate(40%, 40%);
     width: 30px;
     height: 30px;
     background-color: var(--clr);
@@ -81,10 +79,11 @@
   }
 }
 
-.progress .tracker-container {
-  transform: rotate(calc((var(--i) + 115) * 0.01turn));
+.progress.show .tracker-container {
+  // transform: rotate(calc((var(--i) + 115) * 0.01turn));
+  transform: rotate(calc((var(--i) + 15) * 0.01turn));
 }
 
-.progress.less .tracker-container {
+.progress.less.show .tracker-container {
   transform: rotate(calc((var(--i) + 15) * 0.01turn));
 }

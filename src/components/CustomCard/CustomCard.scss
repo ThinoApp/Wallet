@@ -1,0 +1,12 @@
+.CustomCard {
+  @apply relative overflow-hidden;
+  &:hover {
+    transform: scale(1.5);
+  }
+  .glossing-green {
+    @apply w-44  h-44 rounded-full;
+    filter: blur(130px);
+
+    z-index: -1;
+  }
+}

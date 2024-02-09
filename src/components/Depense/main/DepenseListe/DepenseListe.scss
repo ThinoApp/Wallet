@@ -1,0 +1,5 @@
+@use "/src/assets/global";
+.DepenseListe {
+  @include global.paddingInline();
+  @apply flex-1 border-2;
+}

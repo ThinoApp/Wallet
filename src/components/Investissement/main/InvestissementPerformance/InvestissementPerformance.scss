@@ -1,0 +1,14 @@
+@use "/src/assets/global";
+
+.InvestissementPerformance {
+  @include global.paddingInline();
+  @apply flex-auto sm:flex-1 w-full h-[50vh] py-4 sm:h-full flex flex-col gap-4 items-start;
+  h2 {
+    color: #fff;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

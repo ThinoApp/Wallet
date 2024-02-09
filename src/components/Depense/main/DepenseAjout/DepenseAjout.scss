@@ -1,0 +1,21 @@
+@use "/src/assets/global";
+
+.DepenseAjout {
+  @include global.paddingInline();
+
+  @apply flex-1 relative;
+  h3 {
+    @apply bg-primary w-fit px-4 py-2 z-30 absolute top-0 -translate-y-1/2 translate-x-8 rounded-md font-extrabold text-xl text-white font-lato;
+    box-shadow: 0px 4px 4px 0px rgba(#000, 0.25);
+  }
+  .input-style {
+    @apply bg-secondary border-none text-white;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .form-label {
+    @apply text-white text-lg;
+  }
+}

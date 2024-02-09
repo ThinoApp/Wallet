@@ -1,0 +1,55 @@
+.InvestissementVolatility {
+  @apply flex flex-col gap-4 items-start w-full p-4;
+  border-radius: 9px;
+  background: #383838;
+  h3 {
+    color: #fff;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .ProgressBar-container {
+    @apply w-full h-7 relative overflow-hidden;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    background: #383838;
+
+    .ProgressBar-current-progress {
+      @apply h-full  bg-green flex items-center justify-end px-4 duration-300;
+      background-image: linear-gradient(to right, #6dda5b, #6dda5b);
+      background-size: 200% auto;
+      background-position: left center;
+      border-radius: 20px;
+      .ProgressBar-line {
+        @apply h-[1px] w-full bg-white duration-300;
+      }
+      .ProgressBar-label {
+        color: #fff;
+        font-family: Lato;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+  }
+
+  & > p {
+    @apply self-end;
+    color: #fff;
+    font-family: Lato;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    span:nth-child(1) {
+      @apply text-green;
+    }
+    span:nth-child(2) {
+      @apply text-sm text-[#898989];
+    }
+  }
+}
