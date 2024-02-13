@@ -1,1 +1,5 @@
-.DepenseBarChart { }
+@use "/src/assets/global";
+.DepenseBarChart {
+  @include global.paddingInline();
+  @apply min-h-[50vh] w-full;
+}

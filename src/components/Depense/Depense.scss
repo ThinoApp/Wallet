@@ -2,6 +2,6 @@
   @apply h-screen  overflow-y-scroll pt-4 flex flex-col items-start gap-12;
 
   .Depense-crud-container {
-    @apply w-full  flex flex-col sm:flex-row gap-4;
+    @apply w-full min-h-[80vh]  flex flex-col sm:flex-row;
   }
 }

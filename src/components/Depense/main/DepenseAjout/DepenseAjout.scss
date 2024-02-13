@@ -3,7 +3,7 @@
 .DepenseAjout {
   @include global.paddingInline();
 
-  @apply flex-1 relative;
+  @apply flex-1 relative pr-4;
   h3 {
     @apply bg-primary w-fit px-4 py-2 z-30 absolute top-0 -translate-y-1/2 translate-x-8 rounded-md font-extrabold text-xl text-white font-lato;
     box-shadow: 0px 4px 4px 0px rgba(#000, 0.25);

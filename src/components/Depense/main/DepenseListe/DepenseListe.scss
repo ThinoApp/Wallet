@@ -1,5 +1,37 @@
 @use "/src/assets/global";
 .DepenseListe {
   @include global.paddingInline();
-  @apply flex-1 border-2;
+  @apply flex-1 w-1/2 overflow-hidden;
+
+  h3 {
+    @apply text-2xl font-bold font-lato text-white;
+  }
+  .tabList {
+    @apply grid w-full h-16 overflow-y-hidden overflow-x-scroll grid-rows-1 grid-flow-col gap-x-4 justify-start;
+    &::-webkit-scrollbar {
+      // display: none !important;
+    }
+    &::-webkit-scrollbar {
+      width: 10px !important; /* Width of the entire scrollbar */
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      @apply bg-primary; /* Color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply bg-[#db5151];
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      @apply bg-red; /* Color of the scroll thumb on hover */
+    }
+  }
+  .tabsTrigger {
+    @apply duration-300  min-w-[150px] bg-primary  rounded-full px-4 py-2 data-[state=active]:bg-[#DB5151] text-white flex items-center gap-2 font-lato text-sm;
+    img {
+      @apply object-cover;
+    }
+  }
 }
