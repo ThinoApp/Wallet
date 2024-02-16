@@ -5,9 +5,11 @@ import "./EconomieObjectif.scss";
 const EconomieObjectif = () => {
   return (
     <div className="EconomieObjectif">
-      {economieObjectif.map((objectif) => {
-        return <EconomieObjectifItem objectif={objectif} />;
-      })}
+      <div className="ObjectifList">
+        {economieObjectif.map((objectif) => {
+          return <EconomieObjectifItem objectif={objectif} />;
+        })}
+      </div>
     </div>
   );
 };

@@ -1,15 +1,18 @@
 .EconomieObjectifItem {
-  @apply py-4 duration-300 h-[90vh] overflow-y-scroll border-[5px] border-green bg-green rounded-lg shadow-md flex flex-col items-start gap-4;
+  @apply py-4 snap-center duration-300 h-[85vh] overflow-y-scroll border-[5px] border-green bg-green rounded-lg shadow-md flex flex-col items-start gap-4;
   box-shadow: 10px 10px 28px black inset, 12px 12px 11px rgba(0, 0, 0, 0.3);
   background: linear-gradient(#4c9940, #383838);
   &::-webkit-scrollbar {
     display: none;
   }
   &.expand {
-    @apply w-[450px];
+    @apply min-w-[450px] max-w-[450px];
   }
   &.collapsed {
-    @apply py-0 w-[100px] items-center border-[1px] border-[#5DBA4E];
+    @apply py-0 w-[100px] min-w-[100px] max-w-[100px] items-center border-[1px] border-[#5DBA4E];
+    &:hover {
+      @apply scale-105;
+    }
     .collapsed-content {
       @apply w-full h-full flex flex-col items-center bg-[#5DBA4E];
 

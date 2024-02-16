@@ -1,8 +1,9 @@
 import { logOut, trendingUp } from "@/utils/icons";
 import "./DashboardTotalDepense.scss";
+import CustomCard from "@/components/CustomCard/CustomCard";
 const DashboardTotalDepense = () => {
   return (
-    <div className="DashboardTotalDepense">
+    <CustomCard colorGloss="#70707A" className="DashboardTotalDepense">
       <div className="icon-container">
         {logOut}
         <span>
@@ -12,7 +13,7 @@ const DashboardTotalDepense = () => {
       </div>
       <h3>Dépense</h3>
       <h4>£ 25000</h4>
-    </div>
+    </CustomCard>
   );
 };
 export default DashboardTotalDepense;

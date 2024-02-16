@@ -1,7 +1,7 @@
 import CircularIndicator from "@/components/CircularIndicator/CircularIndicator";
 import "./EconomieObjectifItem.scss";
 import { Calendar, Clock, MoreVertical, TrendingUp } from "lucide-react";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface EconomieObjectifProps {
@@ -19,8 +19,42 @@ interface EconomieObjectifProps {
 
 const EconomieObjectifItem = ({ objectif }: EconomieObjectifProps) => {
   const [isExpand, setIsExpand] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleOnScroll = () => {
+      if (ref?.current && ref.current.scrollTop > 50) {
+        const h3 = ref.current.querySelector("h3");
+        const p = h3?.querySelector("p");
+        console.log(ref.current.scrollTop);
+        ref.current.classList.add("!pt-0");
+        h3 && h3.classList.add("bg-[#1f1f1f]");
+        if (ref.current && ref.current.scrollTop > 434) {
+          p && p.classList.add("opacity-100");
+          p && p.classList.remove("opacity-0");
+        } else {
+          p && p.classList.add("opacity-0");
+          p && p.classList.add("opacity-100");
+        }
+      } else {
+        if (ref.current) {
+          ref.current.classList.remove("!pt-0"),
+            ref.current.querySelector("h3")?.classList.remove("bg-[#1f1f1f]");
+        }
+      }
+    };
+    if (ref?.current) {
+      ref.current.addEventListener("scroll", handleOnScroll);
+    }
+    return () => {
+      if (ref?.current) {
+        ref.current.removeEventListener("scroll", handleOnScroll);
+      }
+    };
+  }, []);
   return (
     <div
+      ref={ref}
       onClick={() => setIsExpand(!isExpand)}
       className={`EconomieObjectifItem ${isExpand ? "expand" : "collapsed"}`}
     >
@@ -28,12 +62,17 @@ const EconomieObjectifItem = ({ objectif }: EconomieObjectifProps) => {
         {isExpand ? (
           <Fragment key="expanded">
             <motion.h3
+              className="sticky top-0 z-10 p-4 duration-300 w-full"
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               exit={{ x: -100, opacity: 0 }}
             >
               Objectif {objectif.id}: £ {objectif.current} /
               <span>£ {objectif.goal}</span>
+              <p className="duration-300 flex items-center gap-3 text-lg mt-4 opacity-0">
+                <Clock />
+                Historique
+              </p>
             </motion.h3>
             <motion.div
               initial={{ opacity: 0 }}

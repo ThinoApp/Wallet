@@ -9,6 +9,7 @@ const InvestissementActuel = () => {
       <div className="InvestissementActuel-list">
         {investissementActuel.slice(0, 6).map((investissement) => (
           <CustomCard
+            activeHover={true}
             colorGloss={investissement.color}
             className="investissement-item"
             key={investissement.name}

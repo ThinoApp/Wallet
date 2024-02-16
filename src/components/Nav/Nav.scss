@@ -17,10 +17,20 @@
     @apply w-full my-auto mt-4 md:mt-auto flex flex-row md:flex-col items-center;
     li {
       @apply w-full flex py-4 justify-center items-center duration-500 cursor-pointer;
+
+      svg {
+        @apply stroke-white;
+      }
       &.active {
         @apply bg-secondary;
+        .icon {
+          @apply duration-200;
+          filter: drop-shadow(4px 4px 2px var(--c));
+        }
         svg {
           @apply duration-500 stroke-blue;
+          stroke: var(--c);
+          text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.8);
         }
       }
     }

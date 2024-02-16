@@ -2,6 +2,7 @@ import config from "@/utils/config";
 import "./Nav.scss";
 import { menus } from "@/containers/NavContainer/Nav.utils";
 import { Link } from "react-router-dom";
+import { CSSProperties } from "react";
 
 interface Props {
   active: number;
@@ -25,7 +26,11 @@ const Nav = ({ active, handleMenuClick }: Props) => {
       <ul>
         {menus.map((item, index) => (
           <li key={index} className={`${active === index ? "active" : ""}`}>
-            <Link to={item.link} onClick={() => handleMenuClick(index)}>
+            <Link
+              to={item.link}
+              onClick={() => handleMenuClick(index)}
+              style={{ "--c": item.color } as CSSProperties}
+            >
               {/* <img src={item} alt="icon" /> */}
               {item.icon}
             </Link>

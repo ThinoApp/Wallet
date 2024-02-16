@@ -1,5 +1,29 @@
 @use "/src/assets/global";
 .EconomieObjectif {
   @include global.paddingInline();
-  @apply w-[90vw] flex flex-row flex-wrap gap-4;
+  @apply w-full overflow-visible  flex justify-around flex-row  gap-4;
+  .ObjectifList {
+    @apply h-full snap-mandatory snap-x rounded-xl py-4  flex flex-row justify-center gap-7 overflow-y-hidden overflow-x-auto w-[100vw] pb-4;
+
+    &::-webkit-scrollbar {
+      width: 10px !important; /* Width of the entire scrollbar */
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      @apply rounded-full;
+
+      @apply bg-primary; /* Color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-full;
+
+      @apply bg-green;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      @apply bg-[#5DBA4E]; /* Color of the scroll thumb on hover */
+    }
+  }
 }

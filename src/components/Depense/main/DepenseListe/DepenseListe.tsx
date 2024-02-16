@@ -3,7 +3,7 @@ import "./DepenseListe.scss";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import DepenseListeAliment from "../../components/DepenseListeAliment/DepenseListeAliment";
 import DepenseListeTransport from "../../components/DepenseListeTransport/DepenseListeTransport";
-import DepenseListeMultimedia from "@/components/DepenseListeMultimedia/DepenseListeMultimedia";
+import DepenseListeMultimedia from "../../components/DepenseListeMultimedia/DepenseListeMultimedia";
 
 const DepenseListe = () => {
   return (

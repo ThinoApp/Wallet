@@ -5,9 +5,14 @@ import {
   getIconByCategory,
 } from "@/containers/DashboardContainer/Dashboard.utils";
 import config from "@/utils/config";
+import CustomCard from "@/components/CustomCard/CustomCard";
 const DashboardDepenseRecent = () => {
   return (
-    <div className="DashboardDepenseRecent">
+    <CustomCard
+      activeHover={false}
+      colorGloss="#70707A"
+      className="DashboardDepenseRecent"
+    >
       <h2>
         {trendingDown}
         <span>Dépenses récentes</span>
@@ -37,7 +42,7 @@ const DashboardDepenseRecent = () => {
         ))}
       </ul>
       <button>VOIR PLUS</button>
-    </div>
+    </CustomCard>
   );
 };
 export default DashboardDepenseRecent;

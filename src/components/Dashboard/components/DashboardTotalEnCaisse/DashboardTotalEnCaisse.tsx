@@ -1,8 +1,9 @@
 import { arrowUp, briefcase } from "@/utils/icons";
 import "./DashboardTotalEnCaisse.scss";
+import CustomCard from "@/components/CustomCard/CustomCard";
 const DashboardTotalEnCaisse = () => {
   return (
-    <div className="DashboardTotalEnCaisse">
+    <CustomCard colorGloss="blue" className="DashboardTotalEnCaisse">
       <div className="left">
         {briefcase}
         <h3 className="label">En caisse</h3>
@@ -18,7 +19,7 @@ const DashboardTotalEnCaisse = () => {
           </span>
         </p>
       </div>
-    </div>
+    </CustomCard>
   );
 };
 export default DashboardTotalEnCaisse;
