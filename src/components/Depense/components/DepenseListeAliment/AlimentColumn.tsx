@@ -1,6 +1,5 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { MoreHorizontal } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,6 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { trash2 } from "@/utils/icons";
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -17,7 +17,7 @@ export type Aliment = {
   id: number;
   amount: number;
   label: string;
-  date: Date;
+  date: string;
   price: number;
 };
 
@@ -57,15 +57,21 @@ export const columns: ColumnDef<Aliment>[] = [
           >
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
             <DropdownMenuItem
+              className="hover:bg-red"
               onClick={() =>
                 navigator.clipboard.writeText(aliment.id.toString())
               }
             >
-              Copy payment ID
+              Copier l'identifiant
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
+            <DropdownMenuItem className="hover:bg-red flex justify-between items-center">
+              Supprimer
+              <span className="scale-75">{trash2}</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="hover:bg-red">
+              Modifier
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );

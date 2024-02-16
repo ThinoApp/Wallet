@@ -1,0 +1,5 @@
+@use "/src/assets/global";
+.EconomieObjectif {
+  @include global.paddingInline();
+  @apply w-[90vw] flex flex-row flex-wrap gap-4;
+}

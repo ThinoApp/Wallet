@@ -91,22 +91,22 @@ export const dataByYear = [
 
 export const dataByWeek = [
     {
-      week: "17-02-24 / 24-02-24",
+      week: "17-02-24",
       Investissement: 900,
 
     },
     {
-        week: "24-02-24 / 02-03-24",
+        week: "24-02-24",
         Investissement: 600,
     },
     
     {
-        week: "02-03-24 / 09-03-24",
+        week: "02-03-24",
         Investissement: 400,
     },
 
     {
-        week: "09-03-24 / 16-03-24",
+        week: "09-03-24",
         Investissement: 100,
     }
 

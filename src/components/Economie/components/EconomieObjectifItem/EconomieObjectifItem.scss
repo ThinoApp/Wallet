@@ -1,0 +1,96 @@
+.EconomieObjectifItem {
+  @apply py-4 duration-300 h-[90vh] overflow-y-scroll border-[5px] border-green bg-green rounded-lg shadow-md flex flex-col items-start gap-4;
+  box-shadow: 10px 10px 28px black inset, 12px 12px 11px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(#4c9940, #383838);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &.expand {
+    @apply w-[450px];
+  }
+  &.collapsed {
+    @apply py-0 w-[100px] items-center border-[1px] border-[#5DBA4E];
+    .collapsed-content {
+      @apply w-full h-full flex flex-col items-center bg-[#5DBA4E];
+
+      .Objectif-label {
+        box-shadow: 0px -4px 14px #000 inset;
+        @apply duration-300 bg-primary w-full rounded-b-full relative;
+        p {
+          @apply text-2xl absolute top-4 left-1/2 origin-left text-white font-lato uppercase font-extrabold;
+          text-shadow: 0px 4px 4px rgba($color: #000000, $alpha: 0.48);
+          transform: rotate(90deg);
+        }
+      }
+      h3 {
+        @apply my-auto text-5xl font-lato;
+        text-shadow: 0px 4px 4px rgba($color: #000000, $alpha: 0.48);
+      }
+      p.Objectif-evolution {
+        @apply text-white text-3xl font-lato my-auto;
+        text-shadow: -2px -2px 0 #000, 0 -2px 0 #000, 2px -2px 0 #000,
+          2px 0 0 #000, 2px 2px 0 #000, 0 2px 0 #000, -2px 2px 0 #000,
+          -2px 0 0 #000;
+        filter: drop-shadow(5px 5px 0px #000);
+      }
+    }
+  }
+  h3 {
+    @apply px-6 text-3xl font-bold font-lato text-white;
+    span {
+      @apply ml-2;
+      color: rgba(255, 255, 255, 0.59);
+    }
+  }
+
+  .Objectif-statistique {
+    @apply px-6 flex items-center justify-between w-full;
+    .circular-text {
+      @apply text-white font-lato font-bold text-4xl;
+      //   -webkit-text-stroke: 3px #000;
+      text-shadow: -2px -2px 0 #000, 0 -2px 0 #000, 2px -2px 0 #000,
+        2px 0 0 #000, 2px 2px 0 #000, 0 2px 0 #000, -2px 2px 0 #000,
+        -2px 0 0 #000;
+      filter: drop-shadow(5px 5px 0px #000);
+
+      span {
+        @apply text-white;
+      }
+    }
+
+    p {
+      @apply text-white font-lato font-bold text-xl;
+      //   -webkit-text-stroke: 3px #000;
+      text-shadow: -2px -2px 0 #000, 0 -2px 0 #000, 2px -2px 0 #000,
+        2px 0 0 #000, 2px 2px 0 #000, 0 2px 0 #000, -2px 2px 0 #000,
+        -2px 0 0 #000;
+      filter: drop-shadow(5px 5px 0px #000);
+    }
+  }
+
+  h4 {
+    @apply px-6 text-xl flex items-center gap-2 font-bold font-lato text-white;
+  }
+
+  p.Objectif-description {
+    @apply px-6 text-white font-lato font-medium text-sm leading-snug;
+  }
+
+  button.Objectif-btn-deposer {
+    @apply mx-6 bg-[#E0E0E0] self-stretch text-[#4A9040] font-lato font-extrabold text-lg   rounded-md py-4;
+  }
+
+  ul.Objectif-historique-depot {
+    @apply flex flex-col items-start gap-4 w-full;
+    li {
+      @apply flex items-center w-full px-6 py-3;
+      background-color: rgba($color: #000000, $alpha: 0.12);
+      .Objectif-depot-date {
+        @apply text-white font-lato  text-[16px] flex items-center gap-2;
+      }
+      .Objectif-depot-value {
+        @apply text-white font-lato font-bold text-lg ml-auto mr-4;
+      }
+    }
+  }
+}

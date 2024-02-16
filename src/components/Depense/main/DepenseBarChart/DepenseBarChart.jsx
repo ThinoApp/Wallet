@@ -8,6 +8,7 @@ const data = [
     pv: 2400,
     amt: 2400,
     image: "./assets/images/food.png",
+    type: "aliment",
     // get fill() {
     //   return this.uv < 2000 ? "blue" : "red";
     // },
@@ -18,6 +19,7 @@ const data = [
     pv: 1398,
     amt: 2210,
     image: "./assets/images/bus.png",
+    type: "transport",
 
     // get fill() {
     //   return this.uv <= 2000 ? "blue" : "red";
@@ -29,6 +31,7 @@ const data = [
     pv: 9800,
     amt: 2290,
     image: "./assets/images/multimedia.png",
+    type: "divertissement",
 
     // get fill() {
     //   return this.uv <= 2000 ? "blue" : "red";
@@ -40,6 +43,7 @@ const data = [
     pv: 3908,
     amt: 2000,
     image: "./assets/images/multimedia.png",
+    type: "autres",
 
     // get fill() {
     //   return this.uv <= 2000 ? "blue" : "red";
@@ -51,6 +55,7 @@ const data = [
     pv: 4800,
     amt: 2181,
     image: "./assets/images/multimedia.png",
+    type: "autres",
 
     // get fill() {
     //   return this.uv <= 2000 ? "blue" : "red";
@@ -63,13 +68,13 @@ const data = [
     amt: 2500,
     image: "./assets/images/multimedia.png",
   },
-  {
-    name: "7M",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-    image: "./assets/images/multimedia.png",
-  },
+  // {
+  //   name: "7M",
+  //   uv: 3490,
+  //   pv: 4300,
+  //   amt: 2100,
+  //   image: "./assets/images/multimedia.png",
+  // },
 ];
 
 const renderCustomBarLabel = ({ x, y, width, value }) => {
@@ -81,10 +86,6 @@ const renderCustomBarLabel = ({ x, y, width, value }) => {
 };
 
 const CustomXAxisTick = ({ x, y, payload }) => {
-  // Replace 'path/to/your/image.png' with the actual path to your image
-  const imagePath = "./assets/images/food.png";
-  console.log(payload.index);
-
   return (
     <g transform={`translate(${x},${y + 10})`}>
       <image
@@ -95,9 +96,6 @@ const CustomXAxisTick = ({ x, y, payload }) => {
         height="30"
         width="30"
       />
-      {/* <text x={10} y={0} dy={16} textAnchor="middle">
-        {payload.value}
-      </text> */}
     </g>
   );
 };
@@ -105,9 +103,10 @@ const CustomXAxisTick = ({ x, y, payload }) => {
 const DepenseBarChart = () => {
   return (
     <div className="DepenseBarChart h-[400px] flex justify-center">
+      <h2>Répartition</h2>
       <div
-        style={{ height: "100%", width: "80%" }}
-        className="w-full h-full self-center flex flex-col justify-end"
+        style={{ height: "150%", width: "100%" }}
+        className="w-full h-full self-center flex flex-col justify-end "
       >
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
@@ -141,26 +140,18 @@ const DepenseBarChart = () => {
             <defs>
               <linearGradient id="gradient" x1="0" y1="40%" x2="0%" y2="120%">
                 <stop offset="0" stopColor="#db5151" />
-                <stop
-                  offset="1"
-                  stopColor="rgba(40, 179, 188, 0)"
-                  opacity={0}
-                />
+                <stop offset="1" stopColor="rgba(0,0,0, 1)" opacity={0} />
               </linearGradient>
               <linearGradient id="gradient1" x1="0" y1="20%" x2="0%" y2="120%">
                 <stop offset="0" stopColor="#db5151" />
-                <stop
-                  offset="1"
-                  stopColor="rgba(40, 179, 188, 0)"
-                  opacity={0}
-                />
+                <stop offset="1" stopColor="rgba(0, 0, 0, 1)" opacity={0} />
               </linearGradient>
             </defs>
             <Bar
               radius={4}
-              barSize={80}
+              barSize={70}
               dataKey="uv"
-              filter="drop-shadow(10px 10px 12px rgba(0,0,0,25))"
+              filter="drop-shadow(10px 10px 12px rgba(0,0,0,0.2))"
               // fill="url(#gradient)"
               fill={(payload) => payload.fill}
               label={renderCustomBarLabel}

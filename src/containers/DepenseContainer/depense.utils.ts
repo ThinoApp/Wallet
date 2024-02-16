@@ -33,13 +33,15 @@ export const depenseAliment = [
         date: "2022-10-10"
     },
     {
+        id: 4,
+
         label: "Légumes",
         amount: 2,
         price: 1000,
         date: "2022-10-10"
     },
     {
-        id: 4,
+        id: 5,
 
         label: "Fruits",
         amount: 2,
@@ -47,14 +49,14 @@ export const depenseAliment = [
         date: "2022-10-10"
     },
     {
-        id: 5,
+        id: 6,
         label: "Légumes",
         amount: 2,
         price: 1000,
         date: "2022-10-10"
     },
     {
-        id: 6,
+        id: 7,
 
         label: "Fruits",
         amount: 2,

@@ -9,7 +9,7 @@ const DepenseListe = () => {
   return (
     <div className="DepenseListe">
       <h3>Listes</h3>
-      <Tabs defaultValue="account" className="w-full">
+      <Tabs defaultValue="aliment" className="w-full">
         <TabsList className="tabList">
           <TabsTrigger className="tabsTrigger" value="aliment">
             <img
